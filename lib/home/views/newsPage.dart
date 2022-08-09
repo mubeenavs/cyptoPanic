@@ -45,7 +45,7 @@ class NewsPage extends StatelessWidget {
                                 state.results![index].publishedAt
                                     .subtract(const Duration(minutes: 1)),
                                 locale: 'en_short'),
-                            style: kDomainStyle,
+                            style: kTimeStyle,
                           ),
                           title: Text(
                             /// list out the news title
@@ -56,9 +56,9 @@ class NewsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               TextButton.icon(
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.link_outlined,
-                                    color: kColor,
+                                    color: kBlue,
                                     size: 15.0,
                                   ),
                                   onPressed: () {
@@ -107,16 +107,17 @@ class NewsPage extends StatelessWidget {
                               ),
                             ],
                           ),
+
+                          /// Display the currency of corresponding news
                           trailing: Text(
-                            /// Display the currency of corresponding news
-                            '${state.results![index].currencies?[0].code ?? ''}',
+                            state.results![index].currencies?[0].code ?? '',
                             style: const TextStyle(
                               color: Colors.teal,
                             ),
                           ),
                         ),
-                        Divider(
-                          color: Colors.grey,
+                        const Divider(
+                          color: kColor,
                         )
                       ],
                     );

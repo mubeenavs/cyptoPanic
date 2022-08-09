@@ -30,22 +30,26 @@ class DescriptionPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(
-                    color: kColor,
-                    Icons.link_outlined,
-                    size: 10.0,
-                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        color: kBlue,
+                        Icons.link_outlined,
+                        size: 15.0,
+                      ),
 
-                  ///launching corresponding news site for detailed view
-                  TextButton(
-                      onPressed: () {
-                        launchUrl(Uri.parse(
-                            'https://${state.results![index].source?.domain}'));
-                      },
-                      child: Text(
-                        '${state.results![index].domain}',
-                        style: kDomainStyle,
-                      )),
+                      ///launching corresponding news site for detailed view
+                      TextButton(
+                          onPressed: () {
+                            launchUrl(Uri.parse(
+                                'https://${state.results![index].source?.domain}'));
+                          },
+                          child: Text(
+                            '${state.results![index].domain}',
+                            style: kDomainStyle,
+                          )),
+                    ],
+                  ),
                   const Icon(
                     Icons.thumb_up,
                     color: kColor,

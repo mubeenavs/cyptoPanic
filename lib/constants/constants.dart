@@ -21,13 +21,17 @@ const kCommonStyle = TextStyle(
 
 ///Domain text style
 const kDomainStyle = TextStyle(
-  color: Colors.grey,
-  fontSize: 10,
+  color: Colors.blue,
+  fontSize: 15.0,
 );
-
+///style for time text
+const kTimeStyle = TextStyle(
+  color: kColor,
+  fontSize: 15.0,
+);
 ///Style of Vote data
 const kVoteStyle = TextStyle(
-  color: Colors.grey,
+  color: kColor,
   fontSize: 10.0,
 );
 ///grey color
@@ -36,4 +40,5 @@ const kColor=Colors.grey;
 const kCommonColor=Colors.orange;
 ///black color
 const kBlack=Colors.black;
-
+///blue color
+const kBlue=Colors.blue;
